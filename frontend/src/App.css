@@ -1,0 +1,245 @@
+/* Background gradient for the whole page */
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f, #89f7fe, #66a6ff);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  font-family: Arial, sans-serif;
+}
+
+/* Centered main app container */
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Persona selector buttons */
+.persona-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.persona-selector button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.persona-selector button:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.persona-selector button.active {
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Chat container with frosted glass effect */
+.chat-container {
+  border-radius: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat messages list */
+.chat-messages {
+  height: 400px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+/* Individual message bubble */
+.message {
+  margin: 8px 0;
+  padding: 10px 14px;
+  border-radius: 18px;
+  max-width: 75%;
+  word-wrap: break-word;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* User message bubble */
+.message.user {
+  background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+  color: #2f4f4f;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+/* Assistant message bubble */
+.message.assistant {
+  background: linear-gradient(135deg, #b2fefa, #0ed2f7);
+  color: #003333;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+/* Chat input row */
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.chat-input input:focus {
+  border-color: #00c6ff;
+  box-shadow: 0 0 5px rgba(0, 198, 255, 0.5);
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  border: none;
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.chat-input button:hover {
+  background: linear-gradient(45deg, #0056b3, #0094cc);
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* Soft skin/beige gradient */
+  background: linear-gradient(135deg, #fce7d0, #f6d6b8, #fddac0);
+  color: #333;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #d5855b, #b76e4b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #6a4b3d;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #e0b79d;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  background-color: #fffaf7;
+  color: #6a4b3d;
+}
+
+input[type="text"]:focus {
+  border-color: #d5855b;
+  box-shadow: 0 0 8px rgba(213, 133, 91, 0.4);
+}
+
+button {
+  background: linear-gradient(90deg, #d5855b, #b76e4b);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #b76e4b, #d5855b);
+}
+
+.box-container {
+    background: linear-gradient(135deg, #fbe9d7, #f8d3b2);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    /* Make the box start large but still responsive */
+    min-width: 400px; /* You can adjust this value */
+    max-width: 90%;   /* Keeps it responsive on small screens */
+
+    transition: all 0.3s ease; /* Smooth resize */
+}
+
+.chat-container {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #f9e1c0b8;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  max-width: 900px; /* stays wide */
+  min-width: 700px; /* prevents shrinking too much */
+  min-height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
